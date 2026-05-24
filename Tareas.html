@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPlat — Tareas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-mark">EduPlat <span>G09</span></div>
+      <p>Cursos en Línea</p>
+    </div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a href="Dashboard.html" class="nav-item"><span class="icon">⌂</span> Dashboard</a>
+      <a href="Cursos.html" class="nav-item"><span class="icon">≡</span> Mis Cursos</a>
+      <a href="Tareas.html" class="nav-item active"><span class="icon">✎</span> Tareas</a>
+      <a href="Evaluaciones.html" class="nav-item"><span class="icon">◫</span> Evaluaciones</a>
+      <span class="nav-section-label">Cuenta</span>
+      <a href="Perfil.html" class="nav-item"><span class="icon">◯</span> Mi Perfil</a>
+      <a href="Creditos.html" class="nav-item"><span class="icon">·</span> Créditos</a>
+      <a href="Index.html" class="nav-item" style="color:var(--danger);"><span class="icon">←</span> Cerrar Sesión</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="avatar">MO</div>
+      <div class="sidebar-user-info">
+        <div class="name">Morejon Salavarria</div>
+        <div class="role">Estudiante</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Mis Tareas</span>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Buscar tarea..." />
+        </div>
+        <div class="notif-btn">🔔<span class="notif-dot"></span></div>
+        <a href="Perfil.html"><div class="avatar" style="width:30px;height:30px;font-size:0.68rem;cursor:pointer;">MO</div></a>
+      </div>
+    </div>
+
+    <div class="page-body">
+
+      <div class="section-header fade-in">
+        <div>
+          <h2>Mis Tareas</h2>
+          <p style="margin-top:4px;">Revisa y entrega las tareas de tus cursos</p>
+        </div>
+      </div>
+
+      <div class="stats-grid fade-in fade-in-1" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-card">
+          <div class="stat-icon gold">📝</div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Pendientes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon blue">🔄</div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">En revisión</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">✅</div>
+          <div class="stat-value">12</div>
+          <div class="stat-label">Entregadas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon red">⏰</div>
+          <div class="stat-value">2</div>
+          <div class="stat-label">Vencidas</div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:12px; align-items:center; margin-bottom:20px;" class="fade-in fade-in-2">
+        <div class="tab-nav" style="margin-bottom:0;">
+          <button class="tab-btn active" onclick="setTab(this)">Todas</button>
+          <button class="tab-btn" onclick="setTab(this)">Pendientes</button>
+          <button class="tab-btn" onclick="setTab(this)">Entregadas</button>
+          <button class="tab-btn" onclick="setTab(this)">Vencidas</button>
+        </div>
+        <select class="form-control" style="width:auto;padding:8px 14px;">
+          <option>Todos los cursos</option>
+          <option>Desarrollo de Aplicaciones Web</option>
+          <option>Base de Datos II</option>
+          <option>Algoritmos y Estructuras</option>
+        </select>
+      </div>
+
+      <div class="card fade-in fade-in-3" style="padding:0;">
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Tarea</th>
+                <th>Curso</th>
+                <th>Fecha Límite</th>
+                <th>Ponderación</th>
+                <th>Mi Nota</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-main">Práctica HTML/CSS</td>
+                <td>Desarrollo de Aplicaciones Web</td>
+                <td>21 may 2025</td>
+                <td>10%</td>
+                <td>—</td>
+                <td><span class="badge badge-gold">Pendiente</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️</button>
+                  <button class="btn btn-primary btn-sm" onclick="abrirModal('modal-entregar')">📤 Entregar</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Consultas SQL Avanzadas</td>
+                <td>Base de Datos II</td>
+                <td>25 may 2025</td>
+                <td>15%</td>
+                <td>—</td>
+                <td><span class="badge badge-blue">Pendiente</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️</button>
+                  <button class="btn btn-primary btn-sm" onclick="abrirModal('modal-entregar')">📤 Entregar</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Árbol Binario de Búsqueda</td>
+                <td>Algoritmos y Estructuras</td>
+                <td>27 may 2025</td>
+                <td>20%</td>
+                <td>—</td>
+                <td><span class="badge badge-blue">Pendiente</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️</button>
+                  <button class="btn btn-primary btn-sm" onclick="abrirModal('modal-entregar')">📤 Entregar</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">JavaScript DOM</td>
+                <td>Desarrollo de Aplicaciones Web</td>
+                <td>14 may 2025</td>
+                <td>10%</td>
+                <td><strong style="color:var(--success);">9.0</strong></td>
+                <td><span class="badge badge-green">Calificada</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Normalización de Tablas</td>
+                <td>Base de Datos II</td>
+                <td>10 may 2025</td>
+                <td>15%</td>
+                <td><strong style="color:var(--warning);">7.0</strong></td>
+                <td><span class="badge badge-green">Calificada</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Recursividad y Pilas</td>
+                <td>Algoritmos y Estructuras</td>
+                <td>05 may 2025</td>
+                <td>20%</td>
+                <td><strong style="color:var(--success);">8.5</strong></td>
+                <td><span class="badge badge-green">Calificada</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️</button>
+                </div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- MODAL: Ver Tarea -->
+<div class="modal-overlay" id="modal-ver">
+  <div class="modal">
+    <div class="modal-header">
+      <div><h3>Práctica HTML/CSS</h3><span class="badge badge-gold">Pendiente</span></div>
+      <button class="modal-close" onclick="cerrarModal('modal-ver')">✕</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Curso</div>
+        <div style="font-weight:600;margin-top:4px;">Desarrollo de Aplicaciones Web</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Fecha Límite</div>
+        <div style="font-weight:600;margin-top:4px;">21 mayo 2025</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Ponderación</div>
+        <div style="font-weight:600;margin-top:4px;">10%</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Mi nota</div>
+        <div style="font-weight:600;margin-top:4px;color:var(--text-muted);">Sin calificar</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Instrucciones</label>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;font-size:0.88rem;color:var(--text-dim);line-height:1.6;">
+        Desarrollar una página web completa usando HTML5 y CSS3 que incluya: encabezado con navegación, sección hero, galería con grid/flexbox y footer. Debe ser responsive y pasar validación W3C.
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-ver')">Cerrar</button>
+      <button class="btn btn-primary" onclick="cerrarModal('modal-ver'); abrirModal('modal-entregar')">📤 Entregar Tarea</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Entregar Tarea -->
+<div class="modal-overlay" id="modal-entregar">
+  <div class="modal">
+    <div class="modal-header">
+      <div><h3>Entregar Tarea</h3><p style="font-size:0.82rem;margin-top:2px;">Práctica HTML/CSS · Desarrollo de Aplicaciones Web</p></div>
+      <button class="modal-close" onclick="cerrarModal('modal-entregar')">✕</button>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Comentario (opcional)</label>
+      <textarea class="form-control" placeholder="Agrega una nota para tu docente..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Enlace de entrega (URL o repositorio)</label>
+      <input class="form-control" type="url" placeholder="https://github.com/tu-usuario/practica-html" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Archivo adjunto</label>
+      <input class="form-control" type="file" />
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-entregar')">Cancelar</button>
+      <button class="btn btn-primary" onclick="cerrarModal('modal-entregar')">✅ Confirmar Entrega</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function abrirModal(id) { document.getElementById(id).classList.add('open'); }
+  function cerrarModal(id) { document.getElementById(id).classList.remove('open'); }
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', function(e){ if(e.target===this) this.classList.remove('open'); });
+  });
+  function setTab(btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

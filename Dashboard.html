@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPlat — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-mark">EduPlat <span>G09</span></div>
+      <p>Cursos en Línea</p>
+    </div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a href="Dashboard.html" class="nav-item active"><span class="icon">⌂</span> Dashboard</a>
+      <a href="Cursos.html" class="nav-item"><span class="icon">≡</span> Mis Cursos</a>
+      <a href="Tareas.html" class="nav-item"><span class="icon">✎</span> Tareas</a>
+      <a href="Evaluaciones.html" class="nav-item"><span class="icon">◫</span> Evaluaciones</a>
+      <span class="nav-section-label">Cuenta</span>
+      <a href="Perfil.html" class="nav-item"><span class="icon">◯</span> Mi Perfil</a>
+      <a href="Creditos.html" class="nav-item"><span class="icon">·</span> Créditos</a>
+      <a href="Index.html" class="nav-item" style="color:var(--danger);"><span class="icon">←</span> Cerrar Sesión</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="avatar">MO</div>
+      <div class="sidebar-user-info">
+        <div class="name">Morejon Salavarria</div>
+        <div class="role">Estudiante</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Dashboard</span>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Buscar cursos, tareas..." />
+        </div>
+        <div class="notif-btn">🔔<span class="notif-dot"></span></div>
+        <a href="Perfil.html"><div class="avatar" style="width:30px;height:30px;font-size:0.68rem;cursor:pointer;">MO</div></a>
+      </div>
+    </div>
+
+    <div class="page-body">
+
+      <div class="fade-in" style="margin-bottom:24px;">
+        <h1>Bienvenido, Luis Diego</h1>
+        <p style="margin-top:3px;font-size:0.8rem;">Resumen de tu actividad académica.</p>
+      </div>
+
+      <div class="stats-grid fade-in fade-in-1">
+        <div class="stat-card">
+          <div class="stat-icon blue">≡</div>
+          <div class="stat-value">4</div>
+          <div class="stat-label">Cursos activos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon gold">✎</div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Tareas pendientes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">✓</div>
+          <div class="stat-value">12</div>
+          <div class="stat-label">Tareas entregadas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon blue">◫</div>
+          <div class="stat-value">8.4</div>
+          <div class="stat-label">Promedio general</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:2fr 1fr; gap:16px;">
+
+        <div class="card fade-in fade-in-2">
+          <div class="card-header">
+            <h3 class="card-title">Mis Cursos</h3>
+            <a href="Cursos.html"><button class="btn btn-ghost btn-sm">Ver todos</button></a>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+
+            <a href="CursosD.html" style="display:block;">
+              <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border);transition:border-color 0.12s;" onmouseover="this.style.borderColor='#252830'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="width:38px;height:38px;border-radius:var(--radius-sm);background:var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">💻</div>
+                <div style="flex:1;">
+                  <div style="font-weight:500;font-size:0.85rem;color:var(--text);">Desarrollo de Aplicaciones Web</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:1px;">Ing. Johana Zumba · 24 alumnos</div>
+                  <div class="progress-bar" style="margin-top:6px;"><div class="progress-fill" style="width:72%"></div></div>
+                  <div style="font-size:0.68rem;color:var(--text-muted);margin-top:3px;font-family:var(--font-mono);">72%</div>
+                </div>
+                <span class="badge badge-green">Activo</span>
+              </div>
+            </a>
+
+            <a href="CursosD.html" style="display:block;">
+              <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border);transition:border-color 0.12s;" onmouseover="this.style.borderColor='#252830'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="width:38px;height:38px;border-radius:var(--radius-sm);background:var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🗄</div>
+                <div style="flex:1;">
+                  <div style="font-weight:500;font-size:0.85rem;color:var(--text);">Base de Datos II</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:1px;">Ing. Carlos Reyes · 18 alumnos</div>
+                  <div class="progress-bar" style="margin-top:6px;"><div class="progress-fill gold" style="width:55%"></div></div>
+                  <div style="font-size:0.68rem;color:var(--text-muted);margin-top:3px;font-family:var(--font-mono);">55%</div>
+                </div>
+                <span class="badge badge-green">Activo</span>
+              </div>
+            </a>
+
+            <a href="CursosD.html" style="display:block;">
+              <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border);transition:border-color 0.12s;" onmouseover="this.style.borderColor='#252830'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="width:38px;height:38px;border-radius:var(--radius-sm);background:var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🧮</div>
+                <div style="flex:1;">
+                  <div style="font-weight:500;font-size:0.85rem;color:var(--text);">Algoritmos y Estructuras</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:1px;">Ing. Cristina Jacome · 21 alumnos</div>
+                  <div class="progress-bar" style="margin-top:6px;"><div class="progress-fill green" style="width:88%"></div></div>
+                  <div style="font-size:0.68rem;color:var(--text-muted);margin-top:3px;font-family:var(--font-mono);">88%</div>
+                </div>
+                <span class="badge badge-green">Activo</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="card fade-in fade-in-3">
+          <div class="card-header">
+            <h3 class="card-title">Próximas entregas</h3>
+            <a href="Tareas.html"><button class="btn btn-ghost btn-sm">Ver</button></a>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="padding:10px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:2px solid var(--danger);">
+              <div style="font-size:0.82rem;font-weight:500;color:var(--text);">Práctica HTML/CSS</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:1px;">Prog. Web</div>
+              <div style="font-size:0.67rem;color:var(--danger);margin-top:5px;font-family:var(--font-mono);">vence mañana</div>
+            </div>
+            <div style="padding:10px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:2px solid var(--warning);">
+              <div style="font-size:0.82rem;font-weight:500;color:var(--text);">Consultas SQL</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:1px;">Base de Datos II</div>
+              <div style="font-size:0.67rem;color:var(--warning);margin-top:5px;font-family:var(--font-mono);">3 días restantes</div>
+            </div>
+            <div style="padding:10px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:2px solid var(--accent);">
+              <div style="font-size:0.82rem;font-weight:500;color:var(--text);">Árbol Binario</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:1px;">Algoritmos</div>
+              <div style="font-size:0.67rem;color:var(--accent);margin-top:5px;font-family:var(--font-mono);">5 días restantes</div>
+            </div>
+            <div style="padding:10px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:2px solid var(--border);">
+              <div style="font-size:0.82rem;font-weight:500;color:var(--text);">Examen Parcial 2</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:1px;">Prog. Web</div>
+              <div style="font-size:0.67rem;color:var(--text-muted);margin-top:5px;font-family:var(--font-mono);">en 2 semanas</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

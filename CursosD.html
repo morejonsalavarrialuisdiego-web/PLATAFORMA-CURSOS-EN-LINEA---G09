@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPlat — Detalle del Curso</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-mark">EduPlat <span>G09</span></div>
+      <p>Cursos en Línea</p>
+    </div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a href="Dashboard.html" class="nav-item"><span class="icon">⌂</span> Dashboard</a>
+      <a href="Cursos.html" class="nav-item active"><span class="icon">≡</span> Mis Cursos</a>
+      <a href="Tareas.html" class="nav-item"><span class="icon">✎</span> Tareas</a>
+      <a href="Evaluaciones.html" class="nav-item"><span class="icon">◫</span> Evaluaciones</a>
+      <span class="nav-section-label">Cuenta</span>
+      <a href="Perfil.html" class="nav-item"><span class="icon">◯</span> Mi Perfil</a>
+      <a href="Creditos.html" class="nav-item"><span class="icon">·</span> Créditos</a>
+      <a href="Index.html" class="nav-item" style="color:var(--danger);"><span class="icon">←</span> Cerrar Sesión</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="avatar">MO</div>
+      <div class="sidebar-user-info">
+        <div class="name">Morejon Salavarria</div>
+        <div class="role">Estudiante</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Detalle del Curso</span>
+      <div class="topbar-actions">
+        <div class="notif-btn">🔔<span class="notif-dot"></span></div>
+        <a href="Perfil.html"><div class="avatar" style="width:30px;height:30px;font-size:0.68rem;cursor:pointer;">MO</div></a>
+      </div>
+    </div>
+
+    <div class="page-body">
+
+      <div class="breadcrumb fade-in">
+        <a href="Cursos.html">Mis Cursos</a>
+        <span>›</span>
+        <span class="current">Desarrollo de Aplicaciones Web</span>
+      </div>
+
+      <!-- Course Header -->
+      <div class="card fade-in" style="margin-bottom:24px; padding:0; overflow:hidden;">
+        <div style="height:140px; background:linear-gradient(135deg,#1a2a6c,#4f7cff); display:flex; align-items:center; padding:32px; gap:20px; position:relative;">
+          <div style="font-size:3.5rem; z-index:1;">💻</div>
+          <div style="z-index:1;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+              <h1 style="font-size:1.6rem; color:#fff;">Desarrollo de Aplicaciones Web</h1>
+              <span class="badge badge-green">Activo</span>
+            </div>
+            <p style="color:rgba(255,255,255,0.7); font-size:0.88rem;">4to Semestre · Ing. Johana Zumba · 24 alumnos inscritos</p>
+          </div>
+        </div>
+        <div style="padding:20px 32px; display:flex; gap:32px;">
+          <div>
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Mi progreso</div>
+            <div class="progress-bar" style="width:200px;margin-top:8px;"><div class="progress-fill" style="width:72%"></div></div>
+            <div style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">72% completado</div>
+          </div>
+          <div style="border-left:1px solid var(--border);padding-left:32px;">
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Mi promedio</div>
+            <div style="font-size:1.6rem;font-family:var(--font-head);font-weight:800;color:var(--success);line-height:1;margin-top:4px;">8.1</div>
+          </div>
+          <div style="border-left:1px solid var(--border);padding-left:32px;">
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Tareas entregadas</div>
+            <div style="font-size:1.6rem;font-family:var(--font-head);font-weight:800;color:var(--text);line-height:1;margin-top:4px;">6/8</div>
+          </div>
+          <div style="border-left:1px solid var(--border);padding-left:32px;">
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Evaluaciones</div>
+            <div style="font-size:1.6rem;font-family:var(--font-head);font-weight:800;color:var(--text);line-height:1;margin-top:4px;">2/3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-nav fade-in fade-in-1" id="detalle-tabs">
+        <button class="tab-btn active" onclick="showTab('contenidos')">📄 Contenidos</button>
+        <button class="tab-btn" onclick="showTab('tareas')">📝 Tareas</button>
+        <button class="tab-btn" onclick="showTab('notas')">📊 Mis Notas</button>
+      </div>
+
+      <!-- Tab: Contenidos -->
+      <div id="tab-contenidos" class="fade-in fade-in-2">
+        <div class="section-header">
+          <h3>Material del Curso</h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="card card-sm" style="display:flex;align-items:center;gap:16px;padding:16px;">
+            <div style="width:40px;height:40px;border-radius:8px;background:rgba(79,124,255,0.15);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📄</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.9rem;color:var(--text);">Introducción a HTML5</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">Publicado el 10 mayo 2025 · PDF, 2.3 MB</div>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-primary btn-sm">⬇️ Descargar</button>
+            </div>
+          </div>
+          <div class="card card-sm" style="display:flex;align-items:center;gap:16px;padding:16px;">
+            <div style="width:40px;height:40px;border-radius:8px;background:rgba(240,180,41,0.15);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🎥</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.9rem;color:var(--text);">Estilos CSS — Video Clase</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">Publicado el 15 mayo 2025 · Video, 45 min</div>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-primary btn-sm">▶️ Ver</button>
+            </div>
+          </div>
+          <div class="card card-sm" style="display:flex;align-items:center;gap:16px;padding:16px;">
+            <div style="width:40px;height:40px;border-radius:8px;background:rgba(52,211,153,0.15);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📝</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.9rem;color:var(--text);">JavaScript Fundamentos</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">Publicado el 20 mayo 2025 · Documento</div>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-primary btn-sm">⬇️ Descargar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Tareas -->
+      <div id="tab-tareas" style="display:none;" class="fade-in">
+        <div class="section-header">
+          <h3>Tareas del Curso</h3>
+        </div>
+        <div class="card" style="padding:0;">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tarea</th>
+                  <th>Fecha Límite</th>
+                  <th>Mi Nota</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-main">Práctica HTML/CSS</td>
+                  <td>21 mayo 2025</td>
+                  <td><span style="color:var(--text-muted);">—</span></td>
+                  <td><span class="badge badge-gold">Pendiente</span></td>
+                  <td><div class="table-actions">
+                    <button class="btn btn-primary btn-sm" onclick="abrirModal('modal-entregar')">📤 Entregar</button>
+                  </div></td>
+                </tr>
+                <tr>
+                  <td class="td-main">Formularios y Validación</td>
+                  <td>28 mayo 2025</td>
+                  <td><span style="color:var(--text-muted);">—</span></td>
+                  <td><span class="badge badge-blue">Abierta</span></td>
+                  <td><div class="table-actions">
+                    <button class="btn btn-primary btn-sm" onclick="abrirModal('modal-entregar')">📤 Entregar</button>
+                  </div></td>
+                </tr>
+                <tr>
+                  <td class="td-main">JavaScript DOM</td>
+                  <td>14 mayo 2025</td>
+                  <td><strong style="color:var(--success);">9.0</strong></td>
+                  <td><span class="badge badge-green">Calificada</span></td>
+                  <td><div class="table-actions">
+                    <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver-nota')">👁️ Ver</button>
+                  </div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Mis Notas -->
+      <div id="tab-notas" style="display:none;" class="fade-in">
+        <div class="section-header">
+          <h3>Mis Notas</h3>
+        </div>
+        <div class="card" style="padding:0;">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Evaluación / Tarea</th>
+                  <th>Tipo</th>
+                  <th>Ponderación</th>
+                  <th>Mi Nota</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-main">Parcial 1 — Fundamentos Web</td>
+                  <td><span class="badge badge-blue">Examen</span></td>
+                  <td>30%</td>
+                  <td><strong style="color:var(--success);">8.0</strong></td>
+                  <td><span class="badge badge-green">Aprobado</span></td>
+                </tr>
+                <tr>
+                  <td class="td-main">Quiz — CSS Layouts</td>
+                  <td><span class="badge badge-muted">Quiz</span></td>
+                  <td>10%</td>
+                  <td><strong style="color:var(--success);">8.0</strong></td>
+                  <td><span class="badge badge-green">Aprobado</span></td>
+                </tr>
+                <tr>
+                  <td class="td-main">JavaScript DOM</td>
+                  <td><span class="badge badge-muted">Tarea</span></td>
+                  <td>10%</td>
+                  <td><strong style="color:var(--success);">9.0</strong></td>
+                  <td><span class="badge badge-green">Calificada</span></td>
+                </tr>
+                <tr>
+                  <td class="td-main">Parcial 2 — JavaScript</td>
+                  <td><span class="badge badge-blue">Examen</span></td>
+                  <td>30%</td>
+                  <td><span style="color:var(--text-muted);">Pendiente</span></td>
+                  <td><span class="badge badge-gold">Próximo</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:14px 18px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:0.82rem;color:var(--text-muted);">Promedio actual del curso</span>
+          <span style="font-size:1.3rem;font-weight:800;font-family:var(--font-head);color:var(--success);">8.1</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- MODAL: Entregar Tarea -->
+<div class="modal-overlay" id="modal-entregar">
+  <div class="modal">
+    <div class="modal-header">
+      <div><h3>Entregar Tarea</h3><p style="font-size:0.82rem;margin-top:2px;">Práctica HTML/CSS · Desarrollo de Aplicaciones Web</p></div>
+      <button class="modal-close" onclick="cerrarModal('modal-entregar')">✕</button>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Comentario (opcional)</label>
+      <textarea class="form-control" placeholder="Agrega una nota para tu docente..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Enlace de entrega (URL o repositorio)</label>
+      <input class="form-control" type="url" placeholder="https://github.com/tu-usuario/practica-html" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Archivo adjunto</label>
+      <input class="form-control" type="file" />
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-entregar')">Cancelar</button>
+      <button class="btn btn-primary" onclick="cerrarModal('modal-entregar')">✅ Confirmar Entrega</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Ver Nota -->
+<div class="modal-overlay" id="modal-ver-nota">
+  <div class="modal" style="max-width:420px;">
+    <div class="modal-header">
+      <div><h3>JavaScript DOM</h3><span class="badge badge-green">Calificada</span></div>
+      <button class="modal-close" onclick="cerrarModal('modal-ver-nota')">✕</button>
+    </div>
+    <div style="text-align:center;padding:20px 0;">
+      <div style="font-size:3rem;font-weight:800;font-family:var(--font-head);color:var(--success);">9.0</div>
+      <div style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;">Tu calificación · Ponderación 10%</div>
+    </div>
+    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;margin-bottom:16px;">
+      <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Retroalimentación</div>
+      <div style="font-size:0.85rem;color:var(--text-dim);line-height:1.6;">Excelente manejo del DOM. Buena estructura del código y uso correcto de eventos.</div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-ver-nota')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Eliminar (kept for compatibility but unused in student view) -->
+<div class="modal-overlay" id="modal-eliminar">
+  <div class="modal" style="max-width:400px;text-align:center;">
+    <h3 style="margin-bottom:8px;">¿Eliminar este elemento?</h3>
+    <p style="font-size:0.88rem;margin-bottom:24px;">Esta acción no se puede deshacer.</p>
+    <div style="display:flex;gap:12px;justify-content:center;">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-eliminar')">Cancelar</button>
+      <button class="btn btn-danger" onclick="cerrarModal('modal-eliminar')">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function abrirModal(id) { document.getElementById(id).classList.add('open'); }
+  function cerrarModal(id) { document.getElementById(id).classList.remove('open'); }
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', function(e){ if(e.target===this) this.classList.remove('open'); });
+  });
+
+  const tabs = { contenidos: 'tab-contenidos', tareas: 'tab-tareas', notas: 'tab-notas' };
+  function showTab(name) {
+    Object.values(tabs).forEach(id => document.getElementById(id).style.display = 'none');
+    document.getElementById(tabs[name]).style.display = 'block';
+    document.querySelectorAll('#detalle-tabs .tab-btn').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('onclick').includes(name));
+    });
+  }
+</script>
+</body>
+</html>
