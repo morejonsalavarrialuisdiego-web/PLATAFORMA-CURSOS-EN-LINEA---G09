@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPlat — Evaluaciones</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-mark">EduPlat <span>G09</span></div>
+      <p>Cursos en Línea</p>
+    </div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a href="Dashboard.html" class="nav-item"><span class="icon">⌂</span> Dashboard</a>
+      <a href="Cursos.html" class="nav-item"><span class="icon">≡</span> Mis Cursos</a>
+      <a href="Tareas.html" class="nav-item"><span class="icon">✎</span> Tareas</a>
+      <a href="Evaluaciones.html" class="nav-item active"><span class="icon">◫</span> Evaluaciones</a>
+      <span class="nav-section-label">Cuenta</span>
+      <a href="Perfil.html" class="nav-item"><span class="icon">◯</span> Mi Perfil</a>
+      <a href="Creditos.html" class="nav-item"><span class="icon">·</span> Créditos</a>
+      <a href="Index.html" class="nav-item" style="color:var(--danger);"><span class="icon">←</span> Cerrar Sesión</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="avatar">MO</div>
+      <div class="sidebar-user-info">
+        <div class="name">Morejon Salavarria</div>
+        <div class="role">Estudiante</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Mis Evaluaciones</span>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Buscar evaluación..." />
+        </div>
+        <div class="notif-btn">🔔<span class="notif-dot"></span></div>
+        <a href="Perfil.html"><div class="avatar" style="width:30px;height:30px;font-size:0.68rem;cursor:pointer;">MO</div></a>
+      </div>
+    </div>
+
+    <div class="page-body">
+
+      <div class="section-header fade-in">
+        <div>
+          <h2>Mis Evaluaciones</h2>
+          <p style="margin-top:4px;">Consulta tus exámenes rendidos y los próximos a rendir</p>
+        </div>
+      </div>
+
+      <div class="stats-grid fade-in fade-in-1" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-card">
+          <div class="stat-icon blue">📊</div>
+          <div class="stat-value">9</div>
+          <div class="stat-label">Total evaluaciones</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon gold">⏳</div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Próximas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">✅</div>
+          <div class="stat-value">5</div>
+          <div class="stat-label">Rendidas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon blue">📈</div>
+          <div class="stat-value">7.8</div>
+          <div class="stat-label">Mi promedio</div>
+        </div>
+      </div>
+
+      <div class="card fade-in fade-in-2" style="padding:0;">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+          <h3 class="card-title">Listado de Evaluaciones</h3>
+          <select class="form-control" style="width:auto;padding:7px 12px;font-size:0.82rem;">
+            <option>Todos los cursos</option>
+            <option>Desarrollo de Aplicaciones Web</option>
+            <option>Base de Datos II</option>
+            <option>Algoritmos y Estructuras</option>
+          </select>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Evaluación</th>
+                <th>Curso</th>
+                <th>Tipo</th>
+                <th>Fecha</th>
+                <th>Duración</th>
+                <th>Ponderación</th>
+                <th>Mi Nota</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-main">Parcial 1 — Fundamentos Web</td>
+                <td>Desarrollo de Aplicaciones Web</td>
+                <td><span class="badge badge-blue">Examen</span></td>
+                <td>15 abr 2025</td>
+                <td>90 min</td>
+                <td>30%</td>
+                <td><strong style="color:var(--success);">8.0</strong></td>
+                <td><span class="badge badge-green">Aprobado</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️ Ver</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Quiz — CSS Layouts</td>
+                <td>Desarrollo de Aplicaciones Web</td>
+                <td><span class="badge badge-muted">Quiz</span></td>
+                <td>02 may 2025</td>
+                <td>30 min</td>
+                <td>10%</td>
+                <td><strong style="color:var(--success);">8.0</strong></td>
+                <td><span class="badge badge-green">Aprobado</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️ Ver</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Parcial 2 — JavaScript</td>
+                <td>Desarrollo de Aplicaciones Web</td>
+                <td><span class="badge badge-blue">Examen</span></td>
+                <td>28 may 2025</td>
+                <td>90 min</td>
+                <td>30%</td>
+                <td><span style="color:var(--text-muted);">—</span></td>
+                <td><span class="badge badge-gold">Próximo</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-proximo')">📋 Detalle</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Parcial 1 — SQL Básico</td>
+                <td>Base de Datos II</td>
+                <td><span class="badge badge-blue">Examen</span></td>
+                <td>18 abr 2025</td>
+                <td>60 min</td>
+                <td>30%</td>
+                <td><strong style="color:var(--success);">7.5</strong></td>
+                <td><span class="badge badge-green">Aprobado</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️ Ver</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Quiz — Normalización</td>
+                <td>Base de Datos II</td>
+                <td><span class="badge badge-muted">Quiz</span></td>
+                <td>05 may 2025</td>
+                <td>20 min</td>
+                <td>10%</td>
+                <td><strong style="color:var(--warning);">7.0</strong></td>
+                <td><span class="badge badge-green">Aprobado</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-ver')">👁️ Ver</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td class="td-main">Parcial 2 — Algoritmos</td>
+                <td>Algoritmos y Estructuras</td>
+                <td><span class="badge badge-blue">Examen</span></td>
+                <td>30 may 2025</td>
+                <td>75 min</td>
+                <td>30%</td>
+                <td><span style="color:var(--text-muted);">—</span></td>
+                <td><span class="badge badge-gold">Próximo</span></td>
+                <td><div class="table-actions">
+                  <button class="btn btn-ghost btn-sm" onclick="abrirModal('modal-proximo')">📋 Detalle</button>
+                </div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- MODAL: Ver resultado -->
+<div class="modal-overlay" id="modal-ver">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <div><h3>Parcial 1 — Fundamentos Web</h3><p style="font-size:0.82rem;margin-top:2px;">Desarrollo de Aplicaciones Web · 15 abril 2025</p></div>
+      <button class="modal-close" onclick="cerrarModal('modal-ver')">✕</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-head);color:var(--success);">8.0</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);">Mi nota</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-head);color:var(--text);">30%</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);">Ponderación</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-head);color:var(--gold);">8.4</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);">Promedio grupo</div>
+      </div>
+    </div>
+    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;margin-bottom:16px;">
+      <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Temas evaluados</div>
+      <div style="font-size:0.85rem;color:var(--text-dim);line-height:1.6;">HTML5 semántico, estructura de documentos, formularios y validación básica con CSS.</div>
+    </div>
+    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;">
+      <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Retroalimentación del docente</div>
+      <div style="font-size:0.85rem;color:var(--text-dim);line-height:1.6;">Buen manejo de HTML semántico. Mejorar el uso de selectores CSS y la estructura de formularios.</div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-ver')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Evaluación próxima -->
+<div class="modal-overlay" id="modal-proximo">
+  <div class="modal" style="max-width:460px;">
+    <div class="modal-header">
+      <div><h3>Parcial 2 — JavaScript</h3><span class="badge badge-gold">Próximo</span></div>
+      <button class="modal-close" onclick="cerrarModal('modal-proximo')">✕</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Fecha</div>
+        <div style="font-weight:600;margin-top:4px;">28 mayo 2025</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Duración</div>
+        <div style="font-weight:600;margin-top:4px;">90 minutos</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Ponderación</div>
+        <div style="font-weight:600;margin-top:4px;">30%</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px;">
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;">Nota mínima</div>
+        <div style="font-weight:600;margin-top:4px;">7.0</div>
+      </div>
+    </div>
+    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:14px;">
+      <div style="font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Temas a evaluar</div>
+      <div style="font-size:0.85rem;color:var(--text-dim);line-height:1.6;">Variables, funciones, DOM, eventos, fetch API y manejo de promesas en JavaScript.</div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="cerrarModal('modal-proximo')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function abrirModal(id) { document.getElementById(id).classList.add('open'); }
+  function cerrarModal(id) { document.getElementById(id).classList.remove('open'); }
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', function(e){ if(e.target===this) this.classList.remove('open'); });
+  });
+</script>
+</body>
+</html>

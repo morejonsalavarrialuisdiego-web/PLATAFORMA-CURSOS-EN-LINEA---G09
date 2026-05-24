@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPlat — Registro</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-left">
+      <div class="login-box fade-in">
+        <div class="login-logo">Edu<em>Plat</em></div>
+        <p class="login-tagline">Plataforma de Cursos en Línea · G09</p>
+
+        <h2 style="margin-bottom:5px;font-size:1.2rem;font-weight:400;">Crear cuenta</h2>
+        <p style="font-size:0.8rem;margin-bottom:26px;">Completa los datos para registrarte</p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" type="text" placeholder="Juan" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Apellido</label>
+            <input class="form-control" type="text" placeholder="Pérez" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Correo electrónico</label>
+          <input class="form-control" type="email" placeholder="usuario@universidad.edu" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Rol</label>
+          <select class="form-control">
+            <option value="">Seleccionar rol...</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="docente">Docente</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Contraseña</label>
+          <input class="form-control" type="password" placeholder="Mínimo 8 caracteres" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Confirmar contraseña</label>
+          <input class="form-control" type="password" placeholder="Repite tu contraseña" />
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <label style="display:flex;align-items:flex-start;gap:7px;font-size:0.78rem;color:var(--text-dim);cursor:pointer;line-height:1.5;">
+            <input type="checkbox" style="accent-color:var(--accent);margin-top:2px;flex-shrink:0;" />
+            Acepto los <a href="#" style="color:var(--accent);">términos y condiciones</a>
+          </label>
+        </div>
+
+        <a href="Dashboard.html">
+          <button class="btn btn-primary" style="width:100%;justify-content:center;padding:10px;">
+            Crear Cuenta
+          </button>
+        </a>
+
+        <div class="divider"></div>
+
+        <p style="font-size:0.78rem;text-align:center;color:var(--text-muted);">
+          ¿Ya tienes cuenta? <a href="Index.html">Iniciar sesión</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-hero-text fade-in">
+        <h2>Empieza hoy mismo</h2>
+        <p>Únete a estudiantes y docentes que gestionan su aprendizaje en EduPlat.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="fi">→</span>
+            <p>Registro en menos de 2 minutos</p>
+          </div>
+          <div class="feature-item">
+            <span class="fi">○</span>
+            <p>Tus datos están seguros y protegidos</p>
+          </div>
+          <div class="feature-item">
+            <span class="fi">◎</span>
+            <p>Accede a todos tus cursos desde un solo lugar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
